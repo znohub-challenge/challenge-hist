@@ -3,20 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Челендж з математики · znohub</title>
-<meta name="description" content="Фініш 3-денного челенджу з математики від znohub">
+<title>Челендж з історії · znohub</title>
+<meta name="description" content="Фініш 3-денного челенджу з історії від znohub">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <style>
   /* ───── Налаштування сторінки ───── */
   :root{
-    --blue:#0601F7;          /* основний синій математики */
-    --blue-2:#0473F3;        /* низ градієнта */
-    --grad:linear-gradient(180deg,#0601F7 0%,#0473F3 100%);
-    --soft:#D5E8FD;          /* світло-блакитні блоки */
-    --soft-2:#EEF4FF;
-    --line:#C2C0FF;          /* тонкі рамки */
+    --blue:#E3261F;          /* основний червоний історії */
+    --blue-2:#B3121A;        /* низ градієнта */
+    --grad:linear-gradient(180deg,#F0412F 0%,#C2151B 100%);
+    --soft:#FDE1DF;          /* світло-рожеві блоки */
+    --soft-2:#FFF1F0;
+    --line:#F9C0BE;          /* тонкі рамки */
+    --page:#FEEEEE;          /* фон сторінки, як у матеріалах історії */
     --pink:#FDE7E6;
     --red:#EF3B2D;
     --ink:#111111;
@@ -27,7 +28,7 @@
   html,body{margin:0}
   body{
     font-family:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-    color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;
+    color:var(--ink);background:var(--page);-webkit-font-smoothing:antialiased;
     min-height:100vh;display:flex;flex-direction:column;
   }
   .wrap{width:100%;max-width:600px;margin:0 auto;padding:20px 16px 40px;flex:1}
@@ -71,7 +72,7 @@
   .is-premium .premium-only{display:block}
 
   .note{background:var(--soft);border-radius:14px;padding:14px 16px;font-size:15px;line-height:1.45;margin:4px 0 16px}
-  .err{background:var(--pink);color:#9b1c13;border-radius:12px;padding:12px 14px;font-size:15px;margin:0 0 12px;display:none}
+  .err{background:#fff;border:1.5px solid var(--blue);color:#9b1c13;border-radius:12px;padding:12px 14px;font-size:15px;margin:0 0 12px;display:none}
   .err.show{display:block}
 
   .btn{display:block;width:100%;border:0;border-radius:14px;padding:16px;font:inherit;font-weight:700;font-size:17px;color:#fff;background:var(--grad);cursor:pointer;transition:transform .1s,opacity .2s}
@@ -87,8 +88,8 @@
 
   .gift-msg{margin-top:12px;font-size:15px;line-height:1.45;display:none;border-radius:12px;padding:12px 14px}
   .gift-msg.show{display:block}
-  .gift-msg.ok{background:var(--soft)}
-  .gift-msg.bad{background:var(--pink);color:#9b1c13}
+  .gift-msg.ok{background:var(--soft-2)}
+  .gift-msg.bad{background:#fff;border:1.5px solid var(--blue);color:#9b1c13}
   .gift-msg a{color:var(--blue);font-weight:700}
 
   .closed{display:none}
@@ -105,7 +106,7 @@
 <div class="wrap" id="app">
   <header>
     <img src="data:image/png;base64,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" alt="znohub">
-    <span class="pill">Челендж · математика</span>
+    <span class="pill">Челендж · історія</span>
   </header>
 
   <section class="hero">
@@ -184,13 +185,13 @@
     <div class="gift-msg" id="giftMsg" role="status"></div>
   </section>
 
-  <p class="hand">Крок за кроком до омріяного результату!<small>від твоїх бадді з математики</small></p>
+  <p class="hand">Ще один розділ твоєї історії успіху вже у тебе в руках!<small>від твоїх бадді з історії</small></p>
 </div>
 <div class="bar"></div>
 
 <script>
 /* ───── 1. ВСТАВТЕ СЮДИ URL ВЕБ-ЗАСТОСУНКУ APPS SCRIPT ───── */
-const API_URL = 'https://script.google.com/macros/s/AKfycbxMQLLpGnIlBVN-aZ8R2UEWKJkOMhyoEPGxFl62tNDmQLgKMrDUsnszuvtMHIa7l8Wy/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbzTbS0K3LiG7tNJKDyIlwFu0Y9E4NSyazY_b--ZQhhU1Rm2ry8KFv_NH4ie3wo-ezdh/exec';
 
 /* Варіанти відповідей. Мають збігатися з QUESTIONS у Code.gs */
 const OPTIONS = {
@@ -214,7 +215,7 @@ const ERRORS = {
   server_error: 'Щось пішло не так. Спробуй ще раз за хвилину.',
   network: 'Не вдалося достукатися до сервера. Перевір інтернет і спробуй ще раз за кілька хвилин.',
   not_found: 'Такого коду немає. Перевір, чи правильно його введено.',
-  gift_not_ready: 'Подарунок ще готується. Код збережено, повертайся трохи згодом 💙',
+  gift_not_ready: 'Подарунок ще готується. Код збережено, повертайся трохи згодом ❤️',
   limit: 'Подарунок за цим кодом уже завантажено максимальну кількість разів. Якщо файл не відкрився, напиши своєму бадді.'
 };
 
@@ -265,8 +266,8 @@ async function api(payload, tries = 7, onRetry) {
 fetch(API_URL).then(r => r.json()).then(s => { if (s && s.open === false) app.classList.add('is-closed'); }).catch(() => {});
 
 /* Код, збережений на цьому пристрої */
-function saveCode(c){ try { localStorage.setItem('zh_math_code', c); } catch(e){} }
-function loadCode(){ try { return localStorage.getItem('zh_math_code') || ''; } catch(e){ return ''; } }
+function saveCode(c){ try { localStorage.setItem('zh_hist_code', c); } catch(e){} }
+function loadCode(){ try { return localStorage.getItem('zh_hist_code') || ''; } catch(e){ return ''; } }
 
 function showCode(code) {
   $('#codeBox').textContent = code;
